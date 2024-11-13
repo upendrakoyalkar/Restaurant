@@ -5,7 +5,6 @@ body{
 .heading{
     display: flex;
     justify-content: space-between;
-    
     border: 1px solid black;
 }
 
@@ -26,6 +25,8 @@ body{
  .nav-items >ul >li{
 padding: 10px;
 margin: 10px;
+list-style-type: none;
+
  }
 
  .res-logo{
@@ -37,6 +38,7 @@ margin: 10px;
     background-color:grey ;
     width: 200px;
     margin: 4px;
+    
 }
 
  .res-container{
@@ -54,6 +56,7 @@ margin: 10px;
  .filter-btn{
   margin: 10px;
   cursor: pointer;
+
  } 
 
 .shimmer_container{
@@ -63,6 +66,7 @@ margin: 10px;
 
 .shimmers{
     background-color: dimgrey;
+    margin: 10px;
     height: 400px;
     width: 200px;
     border: 1px solid black;
@@ -73,4 +77,23 @@ margin: 10px;
    width: 50px;
    padding: 3px; 
    margin: 3px;
+}
+
+.shimmerUI_text{
+    padding: 0px;
+    margin: 0px;
+}
+
+.shimmerUI_text{
+    margin-left: 5px;
+}
+
+.headerLines:hover{
+color:blue;
+font-size: larger;
+}
+
+.logincontainer{
+    background-color: aqua;
+    
 }

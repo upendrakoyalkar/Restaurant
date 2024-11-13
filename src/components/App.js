@@ -2,9 +2,9 @@ import React from "react";
 import ReactDom from "react-dom/client";
 import Header from "./Header.js"
 import Body from "./Body.js";
-import { createBrowserRouter , RouterProvider } from "react-router-dom";
+import { createBrowserRouter , RouterProvider, Outlet} from "react-router-dom";
 import About from "./About.js";
-
+import Error from "./Error.js";
 
 
 
@@ -17,7 +17,7 @@ const AppLayout = () => {
     return (
         <div className="app">
             <Header/>
-            <Body/>
+            <Outlet/>
         </div>
     )
 }
@@ -25,10 +25,18 @@ const AppLayout = () => {
 const appRouter = createBrowserRouter([
     {path : "/" ,
     element: <AppLayout />,
+    children : [
+     {
+        path : "/",
+        element : <Body/>
+     },
+     {path : "/about",
+         element : <About />
+     }
+    ],
+    errorElement : <Error/>,
     },
-    {path : "/about",
-        element : <About />
-    },
+    
 ]);
 const root = ReactDom.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={appRouter}  />);
